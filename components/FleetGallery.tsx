@@ -32,7 +32,7 @@ const FleetGallery: React.FC = () => {
           {/* 1. Main Image - Spans 2 cols, 2 rows */}
           <div className="md:col-span-2 md:row-span-2 relative group rounded-[2.5rem] overflow-hidden shadow-apple min-h-[300px]">
             <img
-              src="https://picsum.photos/800/600?random=travel"
+              src="/assets/images/interior.png"
               alt="Interior Mewah Travel Purworejo Jakarta Hiace/Elf"
               loading="lazy"
               width={800}
