@@ -4,7 +4,9 @@ import { Menu, X, ArrowRight } from "lucide-react";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
+  // Scroll listener for navbar background
   useEffect(() => {
     let ticking = false;
 
@@ -20,6 +22,30 @@ const Navbar: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Active section observer
+  useEffect(() => {
+    const sections = ["home", "schedule", "armada", "testimonials"];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-50% 0px -50% 0px", // Trigger when section crosses middle of screen
+      },
+    );
+
+    sections.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (
@@ -76,20 +102,27 @@ const Navbar: React.FC = () => {
                 ["Jadwal", "#schedule"],
                 ["Armada", "#armada"],
                 ["Testimoni", "#testimonials"],
-              ].map(([label, href]) => (
-                <a
-                  key={label}
-                  href={href}
-                  onClick={(e) => scrollToSection(e, href)}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
-                    scrolled
-                      ? "text-slate-600 hover:text-slate-900 hover:bg-white hover:shadow-sm"
-                      : "text-slate-200 hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  {label}
-                </a>
-              ))}
+              ].map(([label, href]) => {
+                const isActive = activeSection === href.substring(1);
+                return (
+                  <a
+                    key={label}
+                    href={href}
+                    onClick={(e) => scrollToSection(e, href)}
+                    className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
+                      isActive
+                        ? scrolled
+                          ? "text-brand-orange bg-white shadow-sm ring-1 ring-slate-100 font-bold"
+                          : "text-white bg-white/20 font-bold"
+                        : scrolled
+                          ? "text-slate-600 hover:text-slate-900 hover:bg-white hover:shadow-sm"
+                          : "text-slate-200 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    {label}
+                  </a>
+                );
+              })}
             </div>
 
             {/* CTA Button */}
