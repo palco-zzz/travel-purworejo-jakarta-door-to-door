@@ -31,7 +31,8 @@ const Hero: React.FC = () => {
         <img
           src="/assets/images/hero.webp"
           // src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop"
-          alt="Travel Landscape"
+          alt="Travel Purworejo Jakarta Landscape"
+          fetchPriority="high"
           className="w-full h-full object-cover opacity-60 scale-105"
         />
         {/* Gradient Overlay for Fade Effect */}

@@ -20,6 +20,7 @@ const Footer: React.FC = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-orange transition-colors"
               >
                 <Instagram size={20} />
@@ -28,6 +29,7 @@ const Footer: React.FC = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-orange transition-colors"
               >
                 <Facebook size={20} />
@@ -101,7 +103,15 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Travel Purworejo Jakarta. Premium
             Door-to-Door.
           </p>
-          <p>Designed with excellence.</p>
+          <a
+            href="https://instagram.com/zxenxi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Designed by ZXENXI
+          </a>
+
+          {/* <p>Designed by ZXENXI</p> */}
         </div>
       </div>
     </footer>

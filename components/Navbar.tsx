@@ -106,6 +106,7 @@ const Navbar: React.FC = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
+                aria-label="Toggle navigation menu"
                 className={`p-2 rounded-full ${scrolled ? "text-slate-900 bg-slate-100" : "text-white bg-white/10"}`}
               >
                 {isOpen ? <X size={20} /> : <Menu size={20} />}

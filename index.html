@@ -1,38 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Travel Purworejo - Jakarta | Door to Door Premium</title>
-    <meta name="description" content="Travel Purworejo Jakarta Door to Door. Berangkat Sore, Armada Isuzu Elf Nyaman." />
+    <meta
+      name="description"
+      content="Travel Purworejo Jakarta Door to Door. Berangkat Sore, Armada Isuzu Elf Nyaman. Jemput depan rumah, antar sampai tujuan via Tol Trans Jawa."
+    />
+    <meta
+      name="keywords"
+      content="travel purworejo jakarta, travel door to door, travel eksekutif, tiket travel murah, travel purworejo, travel jakarta, travel via tol trans jawa"
+    />
+    <meta name="author" content="TravelPwr" />
+    <meta name="theme-color" content="#FF6B00" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://travelpwr.com/" />
+    <meta
+      property="og:title"
+      content="Travel Purworejo - Jakarta | Door to Door Premium"
+    />
+    <meta
+      property="og:description"
+      content="Layanan travel Purworejo ke Jakarta door-to-door kelas eksekutif. Armada Hiace/Elf terbaru, Full AC, via Tol Trans Jawa. Jemput depan rumah, antar sampai tujuan."
+    />
+    <meta property="og:image" content="/assets/images/hero.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://travelpwr.com/" />
+    <meta
+      property="twitter:title"
+      content="Travel Purworejo - Jakarta | Door to Door Premium"
+    />
+    <meta
+      property="twitter:description"
+      content="Layanan travel Purworejo ke Jakarta door-to-door kelas eksekutif. Armada Hiace/Elf terbaru, Full AC, via Tol Trans Jawa."
+    />
+    <meta property="twitter:image" content="/assets/images/hero.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              sans: ["Plus Jakarta Sans", "sans-serif"],
             },
             colors: {
               brand: {
-                orange: '#FF6B00',
-                dark: '#0f172a', 
-                surface: '#F5F5F7', // Apple-like off-white
-                grey: '#86868b',
-                glass: 'rgba(255, 255, 255, 0.7)'
-              }
+                orange: "#FF6B00",
+                dark: "#0f172a",
+                surface: "#F5F5F7", // Apple-like off-white
+                grey: "#86868b",
+                glass: "rgba(255, 255, 255, 0.7)",
+              },
             },
             boxShadow: {
-              'apple': '0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02), 0 10px 15px -3px rgba(0, 0, 0, 0.05)',
-              'glow': '0 0 20px rgba(255, 107, 0, 0.3)',
+              apple:
+                "0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02), 0 10px 15px -3px rgba(0, 0, 0, 0.05)",
+              glow: "0 0 20px rgba(255, 107, 0, 0.3)",
             },
             backdropBlur: {
-              'xs': '2px',
-            }
-          }
-        }
-      }
+              xs: "2px",
+            },
+          },
+        },
+      };
     </script>
     <style>
       html {
@@ -51,20 +94,22 @@
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body class="bg-brand-surface text-brand-dark antialiased selection:bg-brand-orange selection:text-white">
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@^19.2.3",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+          "react/": "https://esm.sh/react@^19.2.3/",
+          "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body
+    class="bg-brand-surface text-brand-dark antialiased selection:bg-brand-orange selection:text-white"
+  >
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
