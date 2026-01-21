@@ -97,7 +97,10 @@ const BookingForm: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Name Field */}
               <div className="group">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2"
+                >
                   Nama Lengkap
                 </label>
                 <div className="relative">
@@ -107,6 +110,7 @@ const BookingForm: React.FC = () => {
                   />
                   <input
                     type="text"
+                    id="name"
                     name="name"
                     required
                     className="w-full bg-slate-50 border-2 border-slate-100 rounded-xl py-4 pl-12 pr-4 text-brand-dark font-medium focus:outline-none focus:border-brand-orange/50 focus:bg-white transition-all"
@@ -120,7 +124,10 @@ const BookingForm: React.FC = () => {
               <div className="grid grid-cols-2 gap-5">
                 {/* Date */}
                 <div className="group">
-                  <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                  <label
+                    htmlFor="date"
+                    className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2"
+                  >
                     Tanggal
                   </label>
                   <div className="relative">
@@ -130,6 +137,7 @@ const BookingForm: React.FC = () => {
                     />
                     <input
                       type="date"
+                      id="date"
                       name="date"
                       min={new Date().toISOString().split("T")[0]}
                       required
@@ -142,7 +150,10 @@ const BookingForm: React.FC = () => {
 
                 {/* Seats */}
                 <div className="group">
-                  <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                  <label
+                    htmlFor="seats"
+                    className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2"
+                  >
                     Kursi
                   </label>
                   <div className="relative">
@@ -151,6 +162,7 @@ const BookingForm: React.FC = () => {
                       size={20}
                     />
                     <select
+                      id="seats"
                       name="seats"
                       className="w-full bg-slate-50 border-2 border-slate-100 rounded-xl py-4 pl-12 pr-4 text-brand-dark font-medium focus:outline-none focus:border-brand-orange/50 focus:bg-white transition-all appearance-none cursor-pointer"
                       value={formData.seats}
@@ -168,7 +180,10 @@ const BookingForm: React.FC = () => {
 
               {/* Pickup Location */}
               <div className="group">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                <label
+                  htmlFor="pickupLocation"
+                  className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2"
+                >
                   Jemput (Purworejo)
                 </label>
                 <div className="relative">
@@ -178,6 +193,7 @@ const BookingForm: React.FC = () => {
                   />
                   <input
                     type="text"
+                    id="pickupLocation"
                     name="pickupLocation"
                     required
                     className="w-full bg-slate-50 border-2 border-slate-100 rounded-xl py-4 pl-12 pr-4 text-brand-dark font-medium focus:outline-none focus:border-brand-orange/50 focus:bg-white transition-all"
@@ -190,7 +206,10 @@ const BookingForm: React.FC = () => {
 
               {/* Dropoff Location */}
               <div className="group">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                <label
+                  htmlFor="dropoffLocation"
+                  className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2"
+                >
                   Tujuan (Jakarta/Jabodetabek)
                 </label>
                 <div className="relative">
@@ -200,6 +219,7 @@ const BookingForm: React.FC = () => {
                   />
                   <input
                     type="text"
+                    id="dropoffLocation"
                     name="dropoffLocation"
                     required
                     className="w-full bg-slate-50 border-2 border-slate-100 rounded-xl py-4 pl-12 pr-4 text-brand-dark font-medium focus:outline-none focus:border-brand-orange/50 focus:bg-white transition-all"

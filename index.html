@@ -45,56 +45,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Plus Jakarta Sans", "sans-serif"],
-            },
-            colors: {
-              brand: {
-                orange: "#FF6B00",
-                dark: "#0f172a",
-                surface: "#F5F5F7", // Apple-like off-white
-                grey: "#86868b",
-                glass: "rgba(255, 255, 255, 0.7)",
-              },
-            },
-            boxShadow: {
-              apple:
-                "0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02), 0 10px 15px -3px rgba(0, 0, 0, 0.05)",
-              glow: "0 0 20px rgba(255, 107, 0, 0.3)",
-            },
-            backdropBlur: {
-              xs: "2px",
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      html {
-        scroll-padding-top: 85px; /* Offset for fixed navbar */
-      }
-      .glass-panel {
-        background: rgba(255, 255, 255, 0.65);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-      .glass-dark {
-        background: rgba(15, 23, 42, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-      }
-    </style>
     <script type="importmap">
       {
         "imports": {
@@ -105,7 +59,7 @@
         }
       }
     </script>
-    <link rel="stylesheet" href="/index.css" />
+
   </head>
   <body
     class="bg-brand-surface text-brand-dark antialiased selection:bg-brand-orange selection:text-white"
