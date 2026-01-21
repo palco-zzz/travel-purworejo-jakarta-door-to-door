@@ -6,9 +6,18 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -37,16 +46,12 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-4 md:px-0 py-4 ${
-          scrolled ? "pt-4" : "pt-6"
-        }`}
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-4 md:px-0 py-4">
         <div
-          className={`max-w-5xl mx-auto rounded-full transition-all duration-300 ${
+          className={`max-w-5xl mx-auto rounded-full transition-colors duration-300 py-3 px-6 ${
             scrolled
-              ? "bg-white/70 backdrop-blur-xl border border-white/20 shadow-apple py-3 px-6"
-              : "bg-transparent py-4 px-4"
+              ? "bg-white/70 backdrop-blur-xl border border-white/20 shadow-apple"
+              : "bg-transparent"
           }`}
         >
           <div className="flex justify-between items-center">
@@ -118,7 +123,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-xl md:hidden flex items-center justify-center p-4 transition-all duration-300 ease-in-out ${
+        className={`fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-md md:hidden flex items-center justify-center p-4 transition-all duration-300 ease-in-out ${
           isOpen
             ? "opacity-100 visible"
             : "opacity-0 invisible pointer-events-none"

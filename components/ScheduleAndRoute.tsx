@@ -91,7 +91,7 @@ const ScheduleAndRoute: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col gap-8">
             {/* Card Purworejo */}
             <div className="bg-brand-dark rounded-[2.5rem] p-8 md:p-10 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange rounded-full opacity-10 blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
+              <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange rounded-full opacity-10 blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-6">
@@ -103,7 +103,7 @@ const ScheduleAndRoute: React.FC = () => {
                   {PICKUP_POINTS.map((point, idx) => (
                     <div
                       key={idx}
-                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors cursor-default"
+                      className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors cursor-default"
                     >
                       <span className="text-sm font-medium text-slate-200">
                         {point}
