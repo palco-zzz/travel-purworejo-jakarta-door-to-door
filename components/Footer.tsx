@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import { Phone, MapPin, Instagram, Facebook } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -110,8 +110,6 @@ const Footer: React.FC = () => {
           >
             Designed by ZXENXI
           </a>
-
-          {/* <p>Designed by ZXENXI</p> */}
         </div>
       </div>
     </footer>

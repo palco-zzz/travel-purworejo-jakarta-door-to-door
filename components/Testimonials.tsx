@@ -14,7 +14,7 @@ const reviews = [
     name: "Ibu Siti",
     from: "Bruno",
     to: "Lebak Bulus",
-    text: "Senang sekali ada travel yang mau jemput sampai ke dalam desa di Bruno. Mobilnya bersih dan AC-nya dingin. Recommended!",
+    text: "Senang sekali ada travel yang mau jemput sampai ke dalam desa di Bruno. Mobilnya bersih and AC-nya dingin. Recommended!",
     stars: 5,
     initial: "S",
   },
@@ -45,7 +45,7 @@ const Testimonials: React.FC = () => {
           {reviews.map((review, idx) => (
             <div
               key={idx}
-              className="bg-white p-8 rounded-[2rem] shadow-apple hover:shadow-xl transition-shadow border border-slate-100 relative group"
+              className="bg-white p-8 rounded-[2rem] shadow-apple border border-slate-100 relative group"
             >
               <Quote className="absolute top-8 right-8 text-slate-100 w-12 h-12 group-hover:text-brand-orange/10 transition-colors" />
 

@@ -1,13 +1,13 @@
 import React from "react";
-import { Clock, MapPin, Navigation, Car, Home } from "lucide-react";
+import { MapPin, Navigation, Car, Home } from "lucide-react";
 import { PICKUP_POINTS, DROPOFF_POINTS } from "../constants";
 
 const ScheduleAndRoute: React.FC = () => {
   return (
     <section id="schedule" className="py-12 md:py-24 bg-brand-surface">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark tracking-tight mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark tracking-tight">
             Rute & Jadwal
           </h2>
           <p className="text-lg text-slate-500">
@@ -27,7 +27,7 @@ const ScheduleAndRoute: React.FC = () => {
 
             <div className="relative pl-4 z-10">
               {/* Vertical Line */}
-              <div className="absolute left-[27px] top-4 bottom-4 w-0.5 bg-slate-100"></div>
+              <div className="absolute left-[27px] top-4 bottom-4 w-0.5 bg-slate-100 origin-top"></div>
 
               {/* Step 1 */}
               <div className="relative flex gap-6 pb-12 group">

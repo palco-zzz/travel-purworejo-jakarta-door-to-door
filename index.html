@@ -45,20 +45,27 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="/assets/HeroVideo/HeroVideo.webp" fetchpriority="high" />
+    <!-- Async font loading to prevent render blocking -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <script type="importmap">
-      {
-        "imports": {
-          "react": "https://esm.sh/react@^19.2.3",
-          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-          "react/": "https://esm.sh/react@^19.2.3/",
-          "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-        }
-      }
-    </script>
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <!-- Note: esm.sh importmap removed - Vite bundles all dependencies -->
 
   </head>
   <body

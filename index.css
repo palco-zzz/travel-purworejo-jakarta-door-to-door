@@ -15,8 +15,25 @@
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.05);
   }
+  /* Performance hint for animated blobs */
+  .animated-blob {
+    will-change: transform;
+  }
 }
 
 html {
   scroll-padding-top: 85px; /* Offset for fixed navbar */
 }
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

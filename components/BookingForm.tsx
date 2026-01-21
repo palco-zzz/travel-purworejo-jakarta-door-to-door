@@ -33,7 +33,7 @@ const BookingForm: React.FC = () => {
       className="py-12 md:py-24 bg-brand-dark relative overflow-hidden"
     >
       {/* Abstract Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-brand-orange/20 rounded-full blur-[100px]"></div>
         <div className="absolute top-[40%] -right-[10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[100px]"></div>
       </div>
@@ -52,39 +52,33 @@ const BookingForm: React.FC = () => {
             </p>
 
             <div className="space-y-6 pt-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-orange font-bold text-xl">
-                  1
+              {[
+                {
+                  step: 1,
+                  title: "Isi Data",
+                  desc: "Lengkapi formulir pemesanan.",
+                },
+                {
+                  step: 2,
+                  title: "Kirim WhatsApp",
+                  desc: "Klik tombol kirim, otomatis membuka WA.",
+                },
+                {
+                  step: 3,
+                  title: "Konfirmasi",
+                  desc: "Admin akan mengonfirmasi ketersediaan & harga.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-orange font-bold text-xl">
+                    {item.step}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg">{item.title}</h4>
+                    <p className="text-slate-400 text-sm">{item.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-lg">Isi Data</h4>
-                  <p className="text-slate-400 text-sm">
-                    Lengkapi formulir pemesanan.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-orange font-bold text-xl">
-                  2
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg">Kirim WhatsApp</h4>
-                  <p className="text-slate-400 text-sm">
-                    Klik tombol kirim, otomatis membuka WA.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-orange font-bold text-xl">
-                  3
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg">Konfirmasi</h4>
-                  <p className="text-slate-400 text-sm">
-                    Admin akan mengonfirmasi ketersediaan & harga.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 

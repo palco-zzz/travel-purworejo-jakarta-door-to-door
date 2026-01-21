@@ -32,9 +32,11 @@ const FleetGallery: React.FC = () => {
           {/* 1. Main Image - Spans 2 cols, 2 rows */}
           <div className="md:col-span-2 md:row-span-2 relative group rounded-[2.5rem] overflow-hidden shadow-apple min-h-[300px]">
             <img
-              src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop"
+              src="https://picsum.photos/800/600?random=travel"
               alt="Interior Mewah Travel Purworejo Jakarta Hiace/Elf"
               loading="lazy"
+              width={800}
+              height={600}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
